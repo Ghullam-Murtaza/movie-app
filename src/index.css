@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.movie-wrapper{
+  display: flex;
+  gap: 20px;
+}
+
+.movie-item {
+  border: 1px solid #ddd;
+  width: 200px;
+  border-radius: 6px;
+  padding: 12px;
+}
