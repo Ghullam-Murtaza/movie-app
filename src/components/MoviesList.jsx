@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { allMovies } from "../data/movies";
+import Title from "./Title";
 
 export const MoviesList = () => {
+  //PASCAL
   //   const [movies, setMovies] = useState([1, 232, 23]);
 
   // CONDITIONAL RENDERING
@@ -14,25 +16,20 @@ export const MoviesList = () => {
 
   return (
     <React.Fragment>
-      <h1>All Movies</h1>
+      <Title text="All Movies ----" date="11/11/123" />
       <div className="movie-wrapper">
-        {allMovies.map((movie) => {
-          return (
-            <div className="movie-item">
-              <h4 style={{
-                  color: 'orangered',
-                  fontSize: '32px',
-                  border: '1px solid #ddd',
-                  borderRadius: '8px',
-                  backgroundColor: 'black',
-                  textAlign: 'center'
-              }}>{movie.title}</h4>
-              <p>{movie.director}</p>
-              <p>Rating: {movie.rating}</p>
-              <button>View Details</button>
-            </div>
-          );
-        })}
+        {allMovies
+          .sort((a, b) => a.title.localeCompare(b))
+          .map((movie) => {
+            return (
+              <div className="movie-item">
+                <h4>{movie.title}</h4>
+                <p>{movie.director}</p>
+                <p>Rating: {movie.rating}</p>
+                <button>View Details</button>
+              </div>
+            );
+          })}
       </div>
     </React.Fragment>
   );

@@ -1,9 +1,7 @@
-export const Button = () => {
-  const handleClick = (text) => {
-    alert(text);
-  };
-
-  
-
-  return <button onClick={()=> handleClick("Sending data now...")}>Send Now</button>;
+export const Button = (props) => {
+  return (
+    <button className="theme-btn" onClick={props.handleButtonClick}>
+      {props.title}
+    </button>
+  );
 };
