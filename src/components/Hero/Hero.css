@@ -1,0 +1,5 @@
+.hero-section {
+    background: url("./../../assets/images/header-bg.png");
+    background-size: cover;
+    margin: 3rem auto;
+}

@@ -1,16 +1,16 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import Title from "./components/Title";
-import { Counter } from "./components/Counter";
-import { MoviesList } from "./components/MoviesList";
+import { AppNavbar } from "./components/AppNavbar/AppNavbar";
+import { Hero } from "./components/Hero/Hero";
+import { LatestMovies } from "./sections/LatestMovies/LatestMovies";
 
 function App() {
   return (
     <React.Fragment>
-      <Title />
-      <Counter />
-      <hr />
-      <MoviesList />
+      <AppNavbar />
+      <Hero />
+      <LatestMovies />
     </React.Fragment>
   );
 }
