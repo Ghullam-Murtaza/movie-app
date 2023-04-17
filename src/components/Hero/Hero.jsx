@@ -29,7 +29,7 @@ export const Hero = () => {
                 Go to Store
               </Button>
               <Button variant="outline-secondary" className="px-4">
-                Explore Movies
+                Explore Posts
               </Button>
             </div>
           </Col>

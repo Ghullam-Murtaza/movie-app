@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import React, { useId, useEffect } from "react";
 import { genres } from "../../data/genres";
 import "./MovieItem.css";
 import { Button, Col } from "react-bootstrap";
@@ -14,6 +14,15 @@ import { Button, Col } from "react-bootstrap";
 
 export const MovieItem = ({ movie }) => {
   const componentId = useId();
+
+
+  // // 2 parameters, 1. function to call, 2. dependency array
+  // useEffect(()=> {
+  //   alert("component has been mounted")
+  // }, [])
+
+
+
 
   const getGenreNameById = (id) => {
     // find single genre from the array on the basis of id

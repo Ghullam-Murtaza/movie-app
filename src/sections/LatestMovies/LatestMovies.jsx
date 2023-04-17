@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { SectionTitle } from "../../components/SectionTitle/SectionTitle";
 import { allMovies } from "../../data/movies";
 import { MovieItem } from "../../components/MovieItem/MovieItem";
+import { Link } from "react-router-dom";
 
 export const LatestMovies = () => {
   const [movies, setMovies] = useState([...allMovies]);
@@ -54,6 +55,8 @@ export const LatestMovies = () => {
     <Container className="movies-list-wrapper">
       <SectionTitle title="Latest Movies" />
 
+    <Link to={'/posts'} >Go to POSTS LIST</Link>
+
       <div class="filters-wrapper py-4">
         <Row>
           <Col md={4}>
@@ -98,9 +101,10 @@ export const LatestMovies = () => {
       </div>
 
       <Row>
-        {movies.map((movie, index) => {
+        {/* {movies.map((movie, index) => {
           return <MovieItem movie={movie} key={`${movie.id}_${index}`} />;
-        })}
+        })} */}
+        <MovieItem movie={movies[0]} key={`${movies[0].id}_${1}`} />;
       </Row>
     </Container>
   );
